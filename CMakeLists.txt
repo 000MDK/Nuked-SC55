@@ -11,9 +11,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # Prefer C++11 standard
 set(CMAKE_CXX_STANDARD 11)
 
-# set AUTORCC
-set(CMAKE_AUTORCC ON)
-
 if(NOT CMAKE_RUNTIME_OUTPUT_DIRECTORY)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 endif()
@@ -209,7 +206,7 @@ elseif(WIN32)
     list(APPEND SC55_SRC src/midi_win32.cpp)
 endif()
 
-add_executable(nuked-sc55 ${SC55_SRC} ${UTF8MAIN_SRCS})
+add_executable(nuked-sc55 ${SC55_SRC} ${UTF8MAIN_SRCS} app.rc)
 set_nopie(nuked-sc55)
 
 if(TARGET SDL2::SDL2)
