@@ -21,7 +21,14 @@ cmake --build .
 
 ## Linux
 
-T.B.D.
+```
+git clone --recurse-submodules https://github.com/nukeykt/Nuked-SC55.git
+cd Nuked-SC55
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -GNinja ..
+cmake --build .
+```
 
 ## MacOS
 
